@@ -1,0 +1,40 @@
+.LoginPage {
+  width: 100% !important;
+  height: 100vh !important;
+  background: #000000;
+  background: -moz-linear-gradient(
+    -45deg,
+    #000000 0%,
+    #2536ac 50%,
+    #40f5f8 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    #000000 0%,
+    #2536ac 50%,
+    #40f5f8 100%
+  );
+  background: linear-gradient(135deg, #000000 0%, #2536ac 50%, #40f5f8 100%);
+  align-items: center !important;
+}
+.CardBox {
+  margin: 5rem !important;
+}
+.titleHeader {
+  color: rgb(200, 213, 223);
+  text-align: center;
+}
+.card {
+  opacity: 0.25;
+  background-color: #000000 !important;
+  color: white !important;
+  border-radius: 1rem !important;
+  padding: 1rem 2rem;
+}
+.input {
+  border: #fff solid 2px !important;
+  border-radius: 0.5rem !important;
+  color: #fff !important;
+  margin: 1rem auto !important;
+  width: 100% !important;
+}

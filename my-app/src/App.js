@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import Login from "./components/login/Login";
 
 import "./App.css";
 
@@ -9,7 +10,7 @@ const App = () => {
         <main role="main">
           <Routes>
             {/* <Route path="/" element={<Home />}></Route> */}
-            <Route path="/login" element={<Login />}></Route>
+            <Route path="/" element={<Login />}></Route>
           </Routes>
         </main>
       </div>
