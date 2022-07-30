@@ -1,6 +1,7 @@
 .LoginPage {
   display: flex !important;
   align-items: center !important;
+  justify-content: space-around !important;
   width: 100% !important;
   height: 100vh !important;
   background: #0b6cf8;
@@ -19,8 +20,8 @@
   background: linear-gradient(135deg, #0b6cf8 0%, #1fadf6 50%, #51fff1 100%);
 }
 .CardBox {
-  margin: 5rem 10rem !important;
-  width: 25rem !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 .titleHeader {
   color: rgb(200, 213, 223);
@@ -28,10 +29,12 @@
 }
 .card {
   opacity: 0.35;
-  background-color: #000000 !important;
+  background-color: #000033 !important;
   color: white !important;
   border-radius: 1rem !important;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem !important;
+  width: 40% !important;
+  margin: 1rem auto !important;
 }
 .input {
   border: #fff solid 2px !important;
@@ -44,17 +47,27 @@
 .btnLogin {
   width: 100% !important;
 }
-
+.img {
+  opacity: 0.45 !important;
+  width: 70%;
+}
+.btnBack {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-align: center !important;
+}
 /* responsiv================================================ */
 
 @media screen and (max-width: 768px) {
   .CardBox {
     width: 90% !important;
-    margin: 1rem !important;
+    margin: 1rem auto !important;
   }
   .card {
     align-items: center !important;
     justify-content: center !important;
+    width: 16rem !important;
   }
 
   .input {
@@ -64,5 +77,8 @@
   }
   .btnLogin {
     width: min-content !important;
+  }
+  .img {
+    display: none;
   }
 }

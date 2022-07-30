@@ -7,11 +7,12 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router";
 import { loginService, registerService } from "../../services/authService";
-
+import { NavLink } from "react-router-dom";
+import imgLogin from "../../assets/img/imgLogin.png";
 import classes from "./login.module.css";
 
 const Login = () => {
-  const [code, setCode] = useState(false);
+  const [data, setData] = useState(false);
 
   const [showPassword, setShowPassword] = useState(false);
   const [userName, setUserName] = useState("");
@@ -41,16 +42,61 @@ const Login = () => {
   const loginHandler = () => {
     loginService(userName, password).then((res) => {
       if (res.status === 201) {
-        setCode(true);
+        setData(true);
       }
     });
   };
   return (
     <Grid container className={classes.LoginPage}>
-      <div className={classes.CardBox}>
+      <Grid item xs={12} md={6} className={classes.CardBox}>
         <h2 className={classes.titleHeader}>Talk 2 me 2</h2>
 
-        {code ? (
+        {data ? (
+          <Card className={classes.card}>
+            <CardContent>
+              <Typography variant="h5">Login</Typography>
+              <Input
+                className={classes.input}
+                type="text"
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+                required
+                disableUnderline={true}
+                placeholder=" نام کاربری خود را وارد کنید "
+              />
+
+              <Input
+                className={classes.input}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                value={password}
+                type={showPassword ? "text" : "password"}
+                disableUnderline={true}
+                placeholder="رمز خود را وارد کنید"
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      onClick={() => changeHandler((prevState) => !prevState)}
+                    >
+                      <Switch color="secondary" />
+                    </IconButton>
+                  </InputAdornment>
+                }
+              />
+            </CardContent>
+            <CardActions>
+              <Button
+                variant="contained"
+                type="submit"
+                onClick={loginHandler}
+                className={classes.btnLogin}
+              >
+                Login
+              </Button>
+            </CardActions>
+          </Card>
+        ) : (
+          //
           <Card className={classes.card}>
             <CardContent>
               <Typography variant="h5">Register</Typography>
@@ -70,7 +116,7 @@ const Login = () => {
                 onChange={(e) => setUserEmail(e.target.value)}
                 required
                 disableUnderline={true}
-                placeholder="  ایمیل خود را وارد کنید"
+                placeholder=" ایمیل خود را وارد کنید "
               />
               <Input
                 className={classes.input}
@@ -120,52 +166,15 @@ const Login = () => {
               </Button>
             </CardActions>
           </Card>
-        ) : (
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography variant="h5">Login</Typography>
-              <Input
-                className={classes.input}
-                type="text"
-                value={userName}
-                onChange={(e) => setUserName(e.target.value)}
-                required
-                disableUnderline={true}
-                placeholder=" نام کاربری خود را وارد کنید "
-              />
-
-              <Input
-                className={classes.input}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                value={password}
-                type={showPassword ? "text" : "password"}
-                disableUnderline={true}
-                placeholder="رمز خود را وارد کنید"
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      onClick={() => changeHandler((prevState) => !prevState)}
-                    >
-                      <Switch color="secondary" />
-                    </IconButton>
-                  </InputAdornment>
-                }
-              />
-            </CardContent>
-            <CardActions>
-              <Button
-                variant="contained"
-                type="submit"
-                onClick={loginHandler}
-                className={classes.btnLogin}
-              >
-                Login
-              </Button>
-            </CardActions>
-          </Card>
         )}
-      </div>
+      </Grid>
+
+      <Grid item xs={12} md={6} alignItems="center">
+        <NavLink className={classes.btnBack} to="/">
+          back to home
+        </NavLink>
+        <img className={classes.img} src={imgLogin} alt="img" />
+      </Grid>
     </Grid>
   );
 };
