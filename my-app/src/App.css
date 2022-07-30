@@ -1,18 +1,4 @@
 .App {
   width: 100% !important;
-  height: 100% !important;
-  background: #000000;
-  background: -moz-linear-gradient(
-    -45deg,
-    #000000 0%,
-    #2536ac 50%,
-    #40f5f8 100%
-  );
-  background: -webkit-linear-gradient(
-    -45deg,
-    #000000 0%,
-    #2536ac 50%,
-    #40f5f8 100%
-  );
-  background: linear-gradient(135deg, #000000 0%, #2536ac 50%, #40f5f8 100%);
+  height: 100vh !important;
 }

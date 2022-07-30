@@ -1,31 +1,35 @@
 .LoginPage {
+  display: flex !important;
+  align-items: center !important;
+
   width: 100% !important;
   height: 100vh !important;
-  background: #000000;
+  background: #0b6cf8;
   background: -moz-linear-gradient(
     -45deg,
-    #000000 0%,
-    #2536ac 50%,
-    #40f5f8 100%
+    #0b6cf8 0%,
+    #1fadf6 50%,
+    #51fff1 100%
   );
   background: -webkit-linear-gradient(
     -45deg,
-    #000000 0%,
-    #2536ac 50%,
-    #40f5f8 100%
+    #0b6cf8 0%,
+    #1fadf6 50%,
+    #51fff1 100%
   );
-  background: linear-gradient(135deg, #000000 0%, #2536ac 50%, #40f5f8 100%);
+  background: linear-gradient(135deg, #0b6cf8 0%, #1fadf6 50%, #51fff1 100%);
   align-items: center !important;
 }
 .CardBox {
-  margin: 5rem !important;
+  margin: 5rem 10rem !important;
+  width: 25rem !important;
 }
 .titleHeader {
   color: rgb(200, 213, 223);
   text-align: center;
 }
 .card {
-  opacity: 0.25;
+  opacity: 0.35;
   background-color: #000000 !important;
   color: white !important;
   border-radius: 1rem !important;
@@ -37,4 +41,5 @@
   color: #fff !important;
   margin: 1rem auto !important;
   width: 100% !important;
+  padding: 1rem !important;
 }
