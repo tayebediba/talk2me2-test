@@ -39,7 +39,7 @@ const Login = () => {
     <Grid container className={classes.LoginPage}>
       <div className={classes.CardBox}>
         <h2 className={classes.titleHeader}>Talk 2 me 2</h2>
-        <Card sx={{ minWidth: 400 }} className={classes.card}>
+        <Card className={classes.card}>
           <CardContent>
             <Typography variant="h5">Login</Typography>
             <Input
@@ -102,7 +102,7 @@ const Login = () => {
               variant="contained"
               type="submit"
               onClick={loginHandler}
-              style={{ width: "100%" }}
+              className={classes.btnLogin}
             >
               Login
             </Button>

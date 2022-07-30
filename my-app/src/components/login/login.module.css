@@ -1,7 +1,6 @@
 .LoginPage {
   display: flex !important;
   align-items: center !important;
-
   width: 100% !important;
   height: 100vh !important;
   background: #0b6cf8;
@@ -18,7 +17,6 @@
     #51fff1 100%
   );
   background: linear-gradient(135deg, #0b6cf8 0%, #1fadf6 50%, #51fff1 100%);
-  align-items: center !important;
 }
 .CardBox {
   margin: 5rem 10rem !important;
@@ -42,4 +40,29 @@
   margin: 1rem auto !important;
   width: 100% !important;
   padding: 1rem !important;
+}
+.btnLogin {
+  width: 100% !important;
+}
+
+/* responsiv================================================ */
+
+@media screen and (max-width: 768px) {
+  .CardBox {
+    width: 90% !important;
+    margin: 1rem !important;
+  }
+  .card {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .input {
+    margin: 0 !important;
+    width: 100% !important;
+    margin: 0.5rem auto !important;
+  }
+  .btnLogin {
+    width: min-content !important;
+  }
 }
