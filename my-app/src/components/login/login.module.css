@@ -4,20 +4,20 @@
   justify-content: space-around !important;
   width: 100% !important;
   height: 100vh !important;
-  background: #0b6cf8;
+  background: #0f152f;
   background: -moz-linear-gradient(
     -45deg,
-    #0b6cf8 0%,
-    #1fadf6 50%,
-    #51fff1 100%
+    #0f152f 0%,
+    #185f8d 50%,
+    #0cffeb 100%
   );
   background: -webkit-linear-gradient(
     -45deg,
-    #0b6cf8 0%,
-    #1fadf6 50%,
-    #51fff1 100%
+    #0f152f 0%,
+    #185f8d 50%,
+    #0cffeb 100%
   );
-  background: linear-gradient(135deg, #0b6cf8 0%, #1fadf6 50%, #51fff1 100%);
+  background: linear-gradient(135deg, #0f152f 0%, #185f8d 50%, #0cffeb 100%);
 }
 .CardBox {
   align-items: center !important;
@@ -29,7 +29,7 @@
 }
 .card {
   opacity: 0.35;
-  background-color: #000033 !important;
+  background-color: #000000 !important;
   color: white !important;
   border-radius: 1rem !important;
   padding: 1rem 2rem !important;
